@@ -24,7 +24,7 @@ Starts EC2 instances dynamically based on incoming GitHub webhooks.
 
 The GitHub webhook is configured using the Terraform GitHub provider. The token used for authentication is exported as an environment variable before running Terraform.
 
-**export TF_VAR_github_token="tokenid"**
+**export TF_VAR_github_token="fine_grained_access_token"**
 
 In the API Gateway module (modules/apigateway/main.tf), the webhook is set up to receive workflow-job events from GitHub and forward them to the Lambda function.
 
@@ -97,10 +97,10 @@ in the app directory i use the lambda function code lambda_function.py and path 
 
 # How to use it? Things you must have:
 
-1. Github token with necessary permissions
+1. Fine-grained access token( Read access to metadata Read and Write access to actions, administration, repository hooks, and workflows)
 
 2. Github account and Github repo.
 
 3. set ssm parameter values of github token, github owner and githubrepo name.
 
-4. for webhook must export the variable TF_VAR_github_token=tokenid to set webhook automatically on github.
+4. for webhook must export the variable TF_VAR_github_token=fine_grained_access_token to set webhook automatically on github.
