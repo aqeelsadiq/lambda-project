@@ -93,3 +93,14 @@ in the app directory i use the lambda function code lambda_function.py and path 
 2. **EC2 Instance Not Registering as Runner:** Ensure the GitHub token is correctly retrieved from SSM. check iam role and permissions.
 
 3. **Webhook Not Triggering:** Verify API Gateway logs and check GitHub webhook settings. check github token permission also.
+
+
+# How to use it? Things you must have:
+
+1. Github token with necessary permissions
+
+2. Github account and Github repo.
+
+3. set ssm parameter values of github token, github owner and githubrepo name.
+
+4. for webhook must export the variable TF_VAR_github_token=tokenid to set webhook automatically on github.
