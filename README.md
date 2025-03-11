@@ -28,7 +28,7 @@ create Fine-grained access token with specific permissions
 
 1. Read access to metadata 
 
-2. Read and Write access to actions, administration, repository hooks, and workflows)
+2. Read and Write access to actions, administration, repository hooks, and workflows
 
 **export TF_VAR_github_token="fine_grained_access_token"**
 
