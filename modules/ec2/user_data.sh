@@ -12,7 +12,6 @@ ACTION_RUNNER_VERSION=2.311.0
 GITHUB_OWNER=$(aws ssm get-parameter --name "/lambda/github-owner" --with-decryption --query "Parameter.Value" --output text --region us-west-1)
 PAT=$(aws ssm get-parameter --name "/lambda/github-token" --with-decryption --query "Parameter.Value" --output text --region us-west-1)
 
-
 cd /home/ubuntu
 
 mkdir -p actions-runner && cd actions-runner
