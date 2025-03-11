@@ -20,7 +20,7 @@ A RESTful API endpoint to trigger the Lambda function.
 Starts EC2 instances dynamically based on incoming GitHub webhooks.
 
 # modules Explanation
-# GitHub Webhook Setup
+1. # GitHub Webhook Setup
 
 The GitHub webhook is configured using the Terraform GitHub provider. The token used for authentication is exported as an environment variable before running Terraform.
 
@@ -28,7 +28,7 @@ The GitHub webhook is configured using the Terraform GitHub provider. The token 
 
 In the API Gateway module (modules/apigateway/main.tf), the webhook is set up to receive workflow-job events from GitHub and forward them to the Lambda function.
 
-# EC2 Instance Configuration
+2. # EC2 Instance Configuration
 
 The user_data.sh script performs the following steps:
 
@@ -50,7 +50,7 @@ ec2 instances are in the private subnets.
 
 "**aws ssm get-parameter --name "/lambda/github-owner" --with-decryption --query "Parameter.Value" --output text --region us-west-1**"
 
-# Lambda Function Configuration
+3. # Lambda Function Configuration
 store the **github-token, github-owner and githubrepo-name** in the system manages parameter store manually. 
 
 use the data block to fetch the all three and use it for lambda function.
