@@ -86,3 +86,10 @@ in the app directory i use the lambda function code lambda_function.py and path 
 6. Apply terraform
     **terraform apply --auto-approve -var-file=terraform.tfvars**
 
+# Troubleshooting
+
+1. **Lambda Fails to Start EC2:** Check IAM permissions for the Lambda function.
+
+2. **EC2 Instance Not Registering as Runner:** Ensure the GitHub token is correctly retrieved from SSM. check iam role and permissions.
+
+3. **Webhook Not Triggering:** Verify API Gateway logs and check GitHub webhook settings. check github token permission also.
