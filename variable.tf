@@ -63,6 +63,4 @@ variable "api_gateway_config" {
 }
 
 variable "github_repository_name" {}
-#use export TF_VAR_github_token
-variable "github_token" {}
 variable "github_owner" {}

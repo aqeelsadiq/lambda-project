@@ -11,7 +11,14 @@ provider "aws" {
   region = var.region
 }
 
+
+data "aws_ssm_parameter" "github_token" {
+  name = "/lambda/github-token"
+  with_decryption = true
+}
+
+
 provider "github" {
-  token = var.github_token
+  token = data.aws_ssm_parameter.github_token.value
   owner = var.github_owner
 }
