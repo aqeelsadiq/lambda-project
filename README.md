@@ -99,7 +99,7 @@ in the app directory i use the lambda function code lambda_function.py and path 
 3. **Webhook Not Triggering:** Verify API Gateway logs and check GitHub webhook settings. check github token permission also.
 
 
-# How to use it? Things you must have:
+# Things you must have:
 
 1. Fine-grained access token( Read access to metadata Read and Write access to actions, administration, repository hooks, and workflows)
 
