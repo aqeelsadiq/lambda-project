@@ -28,7 +28,7 @@ create Fine-grained access token with specific permissions
 
 1. Read access to metadata 
 
-2. Read and Write access to actions, administration, repository hooks, and workflows
+2. Read and Write access to actions, **administration, repository hooks, and workflows**
 
 In the API Gateway module (modules/apigateway/main.tf), the webhook is set up to receive workflow-job events from GitHub and forward them to the Lambda function.
 
